@@ -11,8 +11,7 @@ WORKDIR /home/jovyan/work
 RUN pip install pygithub3 pandas
 
 # 创建一个名为default.ipynb的jupyter文件，并写入代码
-RUN jupyter nbconvert --to notebook --execute --output default.ipynb --template
-basic <(echo '{
+RUN jupyter nbconvert --to notebook --execute --output default.ipynb --template basic <(echo '{
  "cells": [
   {
    "cell_type": "code",
