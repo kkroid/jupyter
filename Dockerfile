@@ -8,7 +8,7 @@ COPY . /home/jovyan/work
 WORKDIR /home/jovyan/work
 
 # 安装pygithub3和pandas两个库
-RUN pip install pygithub3 pandas
+RUN pip install Github github pygithub pandas
 
 # 创建一个默认的jupyter文件，名为default.ipynb，内容可以根据你的需求修改
 RUN echo '{"cells":[{"cell_type":"code","execution_count":null,"metadata":{},"outputs":[],"source":["import pandas as pd\\n","import pygithub3\\n","# 这里写你的代码，生成一个output.xlsx文件"]}],"metadata":{"kernelspec":{"display_name":"Python 3","language":"python","name":"python3"},"language_info":{"codemirror_mode":{"name":"ipython","version":3},"file_extension":".py","mimetype":"text/x-python","name":"python","nbconvert_exporter":"python","pygments_lexer":"ipython3","version":"3.9.7"}},"nbformat":4,"nbformat_minor":5}' > default.ipynb
